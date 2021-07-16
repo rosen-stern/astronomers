@@ -55,19 +55,50 @@
         margin-left: 20px;
     }
     
-    ul, ol{
+    ul, ol, table{
         margin-left: 50px;
     }
     
+
+
+
 table {
     width: 100%;
-    text-align: left;
-    outline: 1px solid white;
+  overflow: hidden;
 }
-tr:hover{
-    background-color: gray;
+
+tr {
+    padding: 10px;
+    padding: 200px;
+}
+
+tr:hover {
+    background-color: rgba(184, 182, 178,.5);
     color: black;
 }
+
+td, th {
+  position: relative;
+}
+td:hover::after,
+th:hover::after {
+  content: "";
+  position: absolute;
+    background-color: rgba(184, 182, 178,.5);
+    color: black;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
+td{
+    text-align: center;
+    padding: 20px;
+}
+
+
 
     
     
