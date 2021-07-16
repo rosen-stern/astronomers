@@ -12,19 +12,72 @@
         color: white;
     }
     
+html {
+    scroll-behavior: smooth;
+}
     
     
     body{
         background-color: #090a0f;
 /*          background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
         margin-bottom: 100px;
+        
+          margin: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+        
     }
     
+
+
+#menu {
+  white-space: nowrap;
+  background: #37474F;
+}
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul ul {
+    margin-left: 50px;
+}
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  div#menu ul {
+    position: sticky;
+    top: 0;
+  }
+}
+#menu ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+#menu ul li a.current {
+  background: black;
+}
+
+#menu ul li a:hover {
+    background-color: grey;
+    color: black;
+}
+
+
     #actual-body{
         width: 50%;
         margin: auto;
     }
     
+#header {
+        letter-spacing: 10px;
+          grid-column: 1 / 3;
+    padding: 30px;
+    text-align: center;
+}
+
     h1 {
     font-family: 'Bungee Inline', cursive;
         font-size: 4em;
